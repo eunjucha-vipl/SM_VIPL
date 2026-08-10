@@ -603,8 +603,12 @@ window.SITE = {
       // 초청 강연 (Invited Talks) — period(기간) + title(제목/행사) + detail(강연명, 선택)
       //   최신순 권장. 10개까지 보이고 그 이상은 "More" 버튼으로 펼쳐집니다.
       invitedTalks: [
+        { period: "2026.08.03", title: "Korean Conference on Computer Vision (KCCV) 2026", detail: "Semantic Alignment for Pose-Invariant Identity Preserving Diffusion" },
+        { period: "2026.07.28~2026.07.29", title: "KIRD 컴퓨터 비전 딥러닝", detail: "컴퓨터 비전 딥러닝" },
+        { period: "2026.06.25", title: "대한전자공학회 2026 하계종합학술대회 신진연구자 세", detail: "Toward Controllable Image and Video Generation via Test-Time Optimization" },
         { period: "2025.10.23~2025.10.24", title: "KIRD 컴퓨터 비전 딥러닝 첫걸음 과정 강의", detail: "컴퓨터 비전 딥러닝 첫걸음 2기" },
         { period: "2025.09.24", title: "81st Korean Congress of Radiology (KCR), Refresher Course", detail: "Multimodal Training for Diagnosis and Image Enhancement" },
+        { period: "2025.08.06", title: "Korean Conference on Computer Vision (KCCV) 2025", detail: "Identity-preserving Distillation Sampling by Fixed-Point Iterator" },
         { period: "2025.07.18", title: "2025년 영상이해 및 영상처리연구회 합동 여름학교, Learning / Architecture and Computational Photograph 세션", detail: "Image Processing using Pre-trained Diffusion Model" },
         { period: "2025.06.19~2025.06.20", title: "KIRD 컴퓨터 비전 딥러닝 첫걸음 과정 강의", detail: "컴퓨터 비전 딥러닝 첫걸음 1기" },
         { period: "2025.03.25", title: "인하대학교 2025-1학기 인공지능융합세미나", detail: "생성형 AI 기반의 영상 처리 방법론" },
