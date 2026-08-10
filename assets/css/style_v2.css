@@ -1,0 +1,952 @@
+/* =========================================================
+   VIPL MODERN THEME
+   ========================================================= */
+
+/* ---------- Variables ---------- */
+
+:root {
+  --vipl-blue: #2458df;
+  --vipl-blue-dark: #1744bd;
+
+  --vipl-text: #182230;
+  --vipl-muted: #5d6b80;
+
+  --vipl-bg: #ffffff;
+  --vipl-soft: #f5f8ff;
+  --vipl-border: #dfe6f2;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: var(--vipl-text);
+  background: var(--vipl-bg);
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-title {
+  margin: 0;
+
+  font-size: clamp(34px, 4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--vipl-blue);
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--vipl-blue-dark);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+#home-hero {
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 88px 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 45%,
+      rgba(36, 88, 223, 0.11),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8faff 55%,
+      #eef4ff 100%
+    );
+}
+
+
+/* Hero two-column layout */
+
+#home-hero .hero-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+
+  align-items: center;
+
+  gap: 72px;
+}
+
+
+/* ---------- Hero text ---------- */
+
+#home-hero .hero-copy {
+  max-width: 700px;
+}
+
+
+/* Small label */
+
+#home-hero .hero-kicker {
+  margin: 0 0 32px;
+
+  font-size: 13px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--vipl-blue) !important;
+}
+
+
+/* Main headline */
+
+#home-hero h1 {
+  margin: 0;
+
+  font-size: clamp(58px, 5.4vw, 76px);
+  line-height: 1.01;
+
+  letter-spacing: -0.055em;
+  font-weight: 750;
+
+  color: var(--vipl-text) !important;
+}
+
+
+/* Hero description */
+
+#home-hero .hero-subtitle {
+  max-width: 650px;
+
+  margin: 30px 0 0;
+
+  font-size: 19px;
+  line-height: 1.65;
+
+  color: var(--vipl-muted) !important;
+  opacity: 1 !important;
+}
+
+
+/* ---------- Hero buttons ---------- */
+
+#home-hero .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+#home-hero .hero-buttons a {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Primary button */
+
+#home-hero .hero-buttons a:first-child {
+  color: #ffffff !important;
+
+  background: var(--vipl-blue) !important;
+  border: 1px solid var(--vipl-blue) !important;
+
+  box-shadow:
+    0 10px 24px rgba(36, 88, 223, 0.18);
+}
+
+
+/* Secondary button */
+
+#home-hero .hero-buttons a:nth-child(2) {
+  color: var(--vipl-blue) !important;
+
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid var(--vipl-border) !important;
+
+  box-shadow:
+    0 4px 14px rgba(20, 40, 80, 0.05);
+}
+
+
+/* Button hover */
+
+#home-hero .hero-buttons a:hover {
+  transform: translateY(-2px);
+}
+
+#home-hero .hero-buttons a:first-child:hover {
+  background: var(--vipl-blue-dark) !important;
+}
+
+#home-hero .hero-buttons a:nth-child(2):hover {
+  background: #ffffff !important;
+  border-color: #bccaf0 !important;
+}
+
+
+/* ---------- Hero logo ---------- */
+
+#home-hero .hero-visual {
+  position: relative;
+
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-hero .hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(36, 88, 223, 0.10) 0%,
+      rgba(36, 88, 223, 0.03) 48%,
+      transparent 72%
+    );
+}
+
+#home-hero .hero-visual img {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 18px 32px rgba(23, 70, 209, 0.10));
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+#home-hero .hero-visual img:hover {
+  transform: translateY(-4px);
+
+  filter:
+    drop-shadow(0 22px 40px rgba(23, 70, 209, 0.15));
+}
+
+/* =========================================================
+   ABOUT — EDITORIAL STYLE
+   ========================================================= */
+
+#home-about {
+  padding: 100px 0 110px;
+  background: #ffffff;
+}
+
+#home-about .section-head {
+  margin-bottom: 38px;
+}
+
+
+/* ---------- Lead ---------- */
+
+#home-about .about-lead {
+  max-width: 1080px;
+  margin-bottom: 54px;
+}
+
+#home-about .about-lead p {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 1.75;
+
+  color: #43516a;
+}
+
+
+/* =========================================================
+   RESEARCH FOCUS
+   ========================================================= */
+
+#home-about .about-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 42px;
+
+  margin-bottom: 58px;
+}
+
+
+/* No card background / no shadow */
+
+#home-about .about-focus-item {
+  padding-top: 22px;
+
+  border-top: 2px solid #dce4f2;
+}
+
+
+/* small blue accent */
+
+#home-about .about-focus-item::before {
+  content: "";
+
+  display: block;
+
+  width: 38px;
+  height: 3px;
+
+  margin-top: -24px;
+  margin-bottom: 23px;
+
+  background: var(--vipl-blue);
+}
+
+
+#home-about .about-focus-item h3 {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+  line-height: 1.35;
+
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  color: var(--vipl-text);
+}
+
+
+#home-about .about-focus-item p {
+  margin: 0;
+
+  font-size: 15.5px;
+  line-height: 1.75;
+
+  color: var(--vipl-muted);
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
+
+#home-about .about-statement {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+
+  margin-top: 4px;
+  padding: 0 0 0 28px;
+
+  border-left: 3px solid var(--vipl-blue);
+}
+
+
+#home-about .about-statement p {
+  margin: 0;
+
+  font-size: 22px;
+  line-height: 1.6;
+
+  letter-spacing: -0.02em;
+
+  color: var(--vipl-text);
+}
+
+
+/* =========================================================
+   VISION
+   ========================================================= */
+
+#home-about .about-vision {
+  margin-top: 58px;
+  padding-top: 30px;
+
+  border-top: 1px solid #dfe5ef;
+}
+
+
+#home-about .about-vision-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: var(--vipl-blue);
+}
+
+
+#home-about .about-vision p {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+
+  color: var(--vipl-text);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  #home-about .about-focus-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  #home-about {
+    padding: 72px 0 80px;
+  }
+
+  #home-about .about-lead p {
+    font-size: 17px;
+  }
+
+  #home-about .about-statement p {
+    font-size: 19px;
+  }
+
+  #home-about .about-vision p {
+    font-size: 23px;
+  }
+}
+
+
+
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+#home-notice {
+  padding: 96px 0;
+  background: #f6f8fc;
+}
+
+#home-notice .section-head {
+  margin-bottom: 42px;
+}
+
+#home-notice .section-title {
+  font-size: 42px;
+  color: var(--vipl-text);
+}
+
+
+/* Notice 전체 레이아웃 */
+
+#home-notice .notice-list {
+  width: 100%;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* 개별 카드 */
+
+#home-notice .notice-item {
+  position: relative;
+
+  padding: 30px 32px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--vipl-border);
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 20px rgba(20, 40, 80, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* 카드 hover */
+
+#home-notice .notice-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #c9d6f5;
+
+  box-shadow:
+    0 14px 34px rgba(30, 60, 120, 0.08);
+}
+
+
+/* Graduate / Undergraduate 제목 */
+
+#home-notice .notice-item h3 {
+  margin: 0 0 16px;
+
+  font-size: 20px;
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: var(--vipl-blue);
+}
+
+
+/* 본문 */
+
+#home-notice .notice-item p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #485568;
+}
+
+
+/* 링크 */
+
+#home-notice .notice-item a {
+  color: var(--vipl-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#home-notice .notice-item a:hover {
+  text-decoration: underline;
+}
+
+
+/* Research Areas:
+   세 번째 Notice는 아래에서 전체 폭 사용 */
+
+#home-notice .notice-item:nth-child(3) {
+  grid-column: 1 / -1;
+
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+
+/* Research Areas 리스트 */
+
+#home-notice .notice-item ul {
+  margin: 16px 0 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  list-style: none;
+}
+
+
+#home-notice .notice-item:nth-child(3) li {
+  margin: 0;
+  padding: 13px 16px;
+
+  background: #f7f9fd;
+  border: 1px solid #e8edf6;
+  border-radius: 10px;
+
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 700;
+
+  color: var(--vipl-text);
+
+  /* 글씨를 박스 정중앙으로 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* =========================================================
+   NEWS
+   디자인만 담당 — More/Less 로직은 main.js에 맡김
+   ========================================================= */
+
+#home-news {
+  padding: 96px 0 80px;
+  background: #ffffff;
+}
+
+#home-news .section-head {
+  margin-bottom: 38px;
+}
+
+#home-news .section-title {
+  font-size: 42px;
+  color: var(--vipl-text);
+}
+
+#home-news .news-list {
+  width: 100%;
+  max-width: 1080px;
+}
+
+
+/* ---------- News row ---------- */
+
+#home-news .news-item,
+#home-news .news-row {
+  padding: 17px 8px;
+
+  border-bottom: 1px solid #e8edf4;
+
+  transition:
+    background 0.2s ease;
+}
+
+#home-news .news-item:first-child,
+#home-news .news-row:first-child {
+  border-top: 1px solid #e8edf4;
+}
+
+#home-news .news-item:hover,
+#home-news .news-row:hover {
+  background: #f8faff;
+}
+
+
+/* ---------- Date ---------- */
+
+#home-news .news-date {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a8699;
+}
+
+
+/* ---------- News text ---------- */
+
+#home-news .news-title,
+#home-news .news-text {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--vipl-text);
+}
+
+
+/* ---------- Links ---------- */
+
+#home-news a {
+  color: var(--vipl-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#home-news a:hover {
+  color: var(--vipl-blue-dark);
+}
+
+
+/* ---------- More / Less button ---------- */
+
+#home-news .more-btn,
+#home-news .btn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 28px;
+  padding: 10px 18px;
+
+  background: #f5f8ff;
+  border: 1px solid #dce5f5;
+  border-radius: 999px;
+
+  color: var(--vipl-blue);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#home-news .more-btn:hover,
+#home-news .btn-more:hover {
+  background: #edf3ff;
+  border-color: #cbd8f1;
+  color: var(--vipl-blue-dark);
+}
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .container {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+
+  /* Hero */
+
+  #home-hero {
+    min-height: auto;
+    padding: 76px 0 64px;
+  }
+
+  #home-hero .hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+  #home-hero .hero-copy {
+    max-width: 680px;
+  }
+
+  #home-hero h1 {
+    font-size: clamp(52px, 10vw, 68px);
+  }
+
+  #home-hero .hero-subtitle {
+    margin-top: 26px;
+
+    font-size: 17px;
+  }
+
+  #home-hero .hero-buttons {
+    margin-top: 28px;
+  }
+
+  #home-hero .hero-visual {
+    min-height: auto;
+  }
+
+  #home-hero .hero-visual img {
+    max-width: 420px;
+  }
+
+  #home-hero .hero-visual::before {
+    width: 330px;
+    height: 330px;
+  }
+   
+    /* Notice */
+
+  #home-notice .notice-list {
+    grid-template-columns: 1fr;
+  }
+   
+   /* Research Areas 카드 영역 */ 
+   #home-notice .notice-item:nth-child(3) {
+      grid-column: 1 / -1;
+      padding: 30px 32px 32px;
+   }
+   
+   /* 4개 동일 폭 카드 */
+   #home-notice .notice-item:nth-child(3) ul {
+      width: 100%;
+      margin: 18px 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      list-style: none;
+   }
+   /* 각각 동일한 크기 */
+   #home-notice .notice-item:nth-child(3) li {
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 0;
+      min-height: 82px;
+      margin: 0;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #f7f9fd;
+      border: 1px solid #e5eaf4;
+      border-radius: 12px;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--vipl-text);
+   }
+
+   #home-notice .notice-item:nth-child(3) ul {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+  /* News */
+
+  #home-news .news-item,
+  #home-news .news-row {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+  }
+
+  #home-news table.news-list td:first-child {
+    width: 110px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #home-hero {
+    padding: 62px 0 54px;
+  }
+
+  #home-hero .hero-kicker {
+    margin-bottom: 24px;
+
+    font-size: 11px;
+    letter-spacing: 0.11em;
+  }
+
+  #home-hero h1 {
+    font-size: clamp(46px, 14vw, 58px);
+    line-height: 1.02;
+  }
+
+  #home-hero .hero-subtitle {
+    margin-top: 24px;
+  }
+
+  #home-hero .hero-buttons {
+    margin-top: 26px;
+  }
+
+  #home-hero .hero-buttons a {
+    min-height: 48px;
+    padding: 0 20px;
+
+    font-size: 15px;
+  }
+
+  #home-notice,
+  #home-news {
+    padding: 72px 0;
+  }
+
+  #home-notice .notice-item {
+    padding: 24px 22px;
+  }
+
+  #home-notice .notice-item ul {
+    grid-template-columns: 1fr;
+  }
+   
+  #home-notice .section-title,
+  #home-news .section-title {
+    font-size: 34px;
+  } 
+}
