@@ -605,7 +605,7 @@ window.SITE = {
       invitedTalks: [
         { period: "2026.08.03", title: "Korean Conference on Computer Vision (KCCV) 2026", detail: "Semantic Alignment for Pose-Invariant Identity Preserving Diffusion" },
         { period: "2026.07.28~2026.07.29", title: "KIRD 컴퓨터 비전 딥러닝", detail: "컴퓨터 비전 딥러닝" },
-        { period: "2026.06.25", title: "대한전자공학회 2026 하계종합학술대회 신진연구자 세", detail: "Toward Controllable Image and Video Generation via Test-Time Optimization" },
+        { period: "2026.06.25", title: "대한전자공학회 2026 하계종합학술대회 신진연구자 세션", detail: "Toward Controllable Image and Video Generation via Test-Time Optimization" },
         { period: "2025.10.23~2025.10.24", title: "KIRD 컴퓨터 비전 딥러닝 첫걸음 과정 강의", detail: "컴퓨터 비전 딥러닝 첫걸음 2기" },
         { period: "2025.09.24", title: "81st Korean Congress of Radiology (KCR), Refresher Course", detail: "Multimodal Training for Diagnosis and Image Enhancement" },
         { period: "2025.08.06", title: "Korean Conference on Computer Vision (KCCV) 2025", detail: "Identity-preserving Distillation Sampling by Fixed-Point Iterator" },
