@@ -548,7 +548,7 @@ window.SITE = {
       email: "eunju.cha@sookmyung.ac.kr",       
       office: "Room 317, Renaissance Plaza",            
       // 관심 연구 분야 태그
-      interests: [, "Generative Models", "Computer Vision", "Medical Imaging Analysis", "Truthworthy AI"],
+      interests: [, "Generative Models", "Computer Vision", "Medical Imaging Analysis", "Trustworthy AI"],
       links: [
         { label: "Google Scholar", url: "https://scholar.google.com/citations?user=mqNGNqEAAAAJ&hl=ko&oi=ao" },
         { label: "LinkedIn",       url: "https://kr.linkedin.com/in/eunju-cha-b5b994127" }
