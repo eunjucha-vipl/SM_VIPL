@@ -829,32 +829,87 @@
   function renderAlumni() {
     var alumni = (S.people || {}).alumni || [];
     var back = '<a class="back-link" href="people.html">&larr; Back to People</a>';
+  
     if (!alumni.length) {
-      setHTML("page-body", '<div class="container">' + back +
-        '<div class="empty-hint">No alumni yet.</div></div>');
+      setHTML(
+        "page-body",
+        '<div class="container">' +
+          back +
+          '<div class="empty-hint">No alumni yet.</div>' +
+        '</div>'
+      );
       return;
     }
-    var cards = alumni.map(function (a) {
-      var deg = (a.degree || "").toUpperCase();
-      var degClass = deg.indexOf("PH") === 0 ? "phd" : "ms";
-      var badge = a.degree
-        ? '<span class="alum-badge ' + degClass + '">' + esc(a.degree) +
-          (a.year ? " · " + esc(a.year) : "") + "</span>"
-        : "";
-      return '<div class="alum-card">' +
-        avatar(a.photo, a.name, "alum-avatar") +
-        '<div class="alum-name">' + esc(a.name) + "</div>" +
-        badge +
-        (a.position ? '<div class="alum-pos">' + esc(a.position) + "</div>" : "") +
-        (a.note ? '<div class="alum-note">' + esc(a.note) + "</div>" : "") +
-      "</div>";
-    }).join("");
-    setHTML("page-body",
-      '<div class="container">' + back +
-        '<div class="alum-grid">' + cards + "</div>" +
-      "</div>");
+  
+    function makeCards(list) {
+      return list.map(function (a) {
+  
+        var deg = (a.degree || "").toUpperCase();
+  
+        var degClass =
+          deg.indexOf("PH") === 0 ? "phd" :
+          deg.indexOf("M.") === 0 ? "ms" :
+          "undergrad";
+  
+        var badge = a.degree
+          ? '<span class="alum-badge ' + degClass + '">' +
+              esc(a.degree) +
+              (a.year ? " · " + esc(a.year) : "") +
+            '</span>'
+          : "";
+  
+        return (
+          '<div class="alum-card">' +
+            avatar(a.photo, a.name, "alum-avatar") +
+            '<div class="alum-name">' + esc(a.name) + '</div>' +
+            badge +
+            (a.position
+              ? '<div class="alum-pos">' + esc(a.position) + '</div>'
+              : '') +
+            (a.note
+              ? '<div class="alum-note">' + esc(a.note) + '</div>'
+              : '') +
+          '</div>'
+        );
+      }).join("");
+    }
+  
+    var graduate = alumni.filter(function (a) {
+      return a.level === "Graduate";
+    });
+  
+    var undergraduate = alumni.filter(function (a) {
+      return a.level === "Undergraduate";
+    });
+  
+    var out =
+      '<div class="container">' +
+        back;
+  
+    if (graduate.length) {
+      out +=
+        '<section class="alumni-group">' +
+          '<h2 class="alumni-group-title">Graduate Alumni</h2>' +
+          '<div class="alum-grid">' +
+            makeCards(graduate) +
+          '</div>' +
+        '</section>';
+    }
+  
+    if (undergraduate.length) {
+      out +=
+        '<section class="alumni-group">' +
+          '<h2 class="alumni-group-title">Undergraduate Alumni</h2>' +
+          '<div class="alum-grid">' +
+            makeCards(undergraduate) +
+          '</div>' +
+        '</section>';
+    }
+  
+    out += '</div>';
+  
+    setHTML("page-body", out);
   }
-
   /* ------------------------------------------------------- 페이지: Teaching */
   function renderTeaching() {
     var t = S.teaching || {};
