@@ -1090,6 +1090,26 @@ body[data-page="contact.html"] .page-hero h1::before      { content: "GET IN TOU
 .alumni-cta-title { color: var(--vipl-text); }
 .alumni-cta-arrow { color: var(--vipl-blue); }
 
+.alumni-group {
+  margin-top: 42px;
+}
+
+.alumni-group:first-of-type {
+  margin-top: 32px;
+}
+
+.alumni-group + .alumni-group {
+  margin-top: 72px;
+}
+
+.alumni-group-title {
+  margin: 0 0 24px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--vipl-text);
+}
+
 /* =========================================================
    PROFESSOR — DETAIL PAGE
    ========================================================= */
