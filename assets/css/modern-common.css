@@ -1543,8 +1543,8 @@ body[data-page="contact.html"] .page-hero h1::before      { content: "GET IN TOU
 
 /* Ph.D. */
 .alum-badge.phd {
-  background: #f0e9ff;
-  color: #6d4bc3;
+  background: #e8edf5;
+  color: #334a68;
 }
 
 /* M.S. */
