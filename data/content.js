@@ -677,10 +677,12 @@ window.SITE = {
     //   degree: "Ph.D." 또는 "M.S." (배지 색이 자동으로 구분됩니다)
     //   position: 현재 소속/직장 (선택),  photo: 사진 파일명 (선택)
     alumni: [
-      { name: "Yunseong Jeong", degree: "Intern", year: "2026",
-        photo: "people/char.png"},
       { name: "Nabin Jung", degree: "M.S.", year: "2026",
         position: "Research Intern at ETRI", photo: "people/nbjeong.png"},
+    ],
+    [
+      { name: "Yunseong Jeong", degree: "Intern", year: "2026",
+        photo: "people/char.png"},
       { name: "Kyurie Chio", degree: "Intern", year: "2026",
         photo: "people/char.png"},
       { name: "Na-hyun Kim", degree: "Intern", year: "2025",
