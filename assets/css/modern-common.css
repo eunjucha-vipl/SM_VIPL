@@ -1521,9 +1521,48 @@ body[data-page="contact.html"] .page-hero h1::before      { content: "GET IN TOU
 
   font-size: 1.7rem;
 }
-.alum-name { color: var(--vipl-text); }
-.alum-badge.ms { background: #e6efff; color: var(--vipl-blue); }
-.alum-pos { color: var(--vipl-text); }
+
+.alum-name {
+  color: var(--vipl-text);
+}
+
+/* Alumni badge — common style */
+.alum-badge {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 8px;
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* Ph.D. */
+.alum-badge.phd {
+  background: #f0e9ff;
+  color: #6d4bc3;
+}
+
+/* M.S. */
+.alum-badge.ms {
+  background: #e6efff;
+  color: var(--vipl-blue);
+}
+
+/* Undergraduate / Intern */
+.alum-badge.undergrad {
+  background: #e7f7f4;
+  color: #24766d;
+}
+
+.alum-pos {
+  color: var(--vipl-text);
+}
+
 .alum-note { color: var(--vipl-muted); }
 
 
