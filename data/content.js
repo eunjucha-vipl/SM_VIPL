@@ -116,6 +116,7 @@ window.SITE = {
     //   **별표 두 개** 로 감싸면 굵게 표시됩니다.  예: **CVPR 2026**
     // -------------------------------------------------------------------------
     news: [
+      { date: "09/01/2026", text: "**Eunbi** joined VIPL! Welcome! 🎉" },
       { date: "06/18/2026", text: "One paper has been accepted to **ECCV 2026**!" },
       { date: "06/05/2026", text: "**Soobin** and **Seohyeon** won AI SeoulTech Scholarship! Congrats! 👏" },
       { date: "05/01/2026", text: "One paper has been accepted to **ICML 2026**!" },
@@ -650,7 +651,11 @@ window.SITE = {
            email: "yshalice3814@sookmyung.ac.kr",
            education: "B.S., EE, Sookmyung Women's Univ."
           },
-          
+          { name: "Eunbi So", 
+           photo: "people/eunbi.jpg", 
+           email: "soso1119@sookmyung.ac.kr",
+           education: "B.S., Software Convergence, Kyung Hee Univ."
+          },
         ]
       },
       {
